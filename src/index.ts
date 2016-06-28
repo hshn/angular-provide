@@ -1,14 +1,13 @@
-import { Provide } from './provide';
-import { ProviderProvideFactory, factory as providerFactory } from './provider';
-import { ServiceProvideFactory, factory as serviceFactory } from './service';
-import { FilterProvideFactory, factory as filterFactory } from './filter';
-import { DirectiveProvideFactory, factory as directiveFactory } from './directive';
-import { ComponentProvideFactory, factory as componentFactory } from './component';
+import { Provider } from './provider';
+import {
+  ProviderProvideFactory, ServiceProvideFactory, FilterProvideFactory, DirectiveProvideFactory, ComponentProvideFactory,
+  providerFactory, serviceFactory, filterFactory, directiveFactory, componentFactory
+} from './factory';
 
 import IModule = angular.IModule;
 
-export interface Provider {
-  (module: IModule, ...provides: Provide[]): IModule;
+export interface Provide {
+  (module: IModule, ...provides: Provider[]): IModule;
   provider: ProviderProvideFactory;
   service: ServiceProvideFactory;
   filter: FilterProvideFactory;
@@ -16,9 +15,9 @@ export interface Provider {
   component: ComponentProvideFactory;
 }
 
-export default ((): Provider => {
-  let f = <Provider> function (module: IModule, ...provides: Provide[]) {
-    return provides.reduce((module, provide) => provide(module), module);
+export default ((): Provide => {
+  let f = <Provide> function (module: IModule, ...providers: Provider[]) {
+    return providers.reduce((module, provider) => provider(module), module);
   };
 
   f.provider = providerFactory;

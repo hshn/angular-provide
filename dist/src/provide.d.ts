@@ -1,4 +1,4 @@
 import IModule = angular.IModule;
-export interface Provide {
+export interface Provider {
     (module: IModule): IModule;
 }

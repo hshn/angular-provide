@@ -1,4 +1,4 @@
-import { Provider } from './provide';
+import { Provider } from '../provider';
 import IComponentOptions = angular.IComponentOptions;
 export interface ComponentProvideFactory {
     (name: string, options: IComponentOptions): Provider;

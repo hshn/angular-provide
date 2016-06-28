@@ -1,4 +1,4 @@
-import { Provider } from './provide';
+import { Provider } from '../provider';
 import IDirectiveFactory = angular.IDirectiveFactory;
 export interface DirectiveProvideFactory {
     (name: string, directiveFactory: IDirectiveFactory): Provider;

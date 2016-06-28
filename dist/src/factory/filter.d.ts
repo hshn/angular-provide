@@ -1,4 +1,4 @@
-import { Provider } from './provide';
+import { Provider } from '../provider';
 export interface FilterProvideFactory {
     (name: string, filterFactoryFunction: Function): Provider;
     (name: string, inlineAnnotatedFunction: any[]): Provider;

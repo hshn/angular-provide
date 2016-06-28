@@ -1,17 +1,13 @@
-import { Provide } from './provide';
-import { ProviderProvideFactory } from './provider';
-import { ServiceProvideFactory } from './service';
-import { FilterProvideFactory } from './filter';
-import { DirectiveProvideFactory } from './directive';
-import { ComponentProvideFactory } from './component';
+import { Provider } from './provider';
+import { ProviderProvideFactory, ServiceProvideFactory, FilterProvideFactory, DirectiveProvideFactory, ComponentProvideFactory } from './factory';
 import IModule = angular.IModule;
-export interface Provider {
-    (module: IModule, ...provides: Provide[]): IModule;
+export interface Provide {
+    (module: IModule, ...provides: Provider[]): IModule;
     provider: ProviderProvideFactory;
     service: ServiceProvideFactory;
     filter: FilterProvideFactory;
     directive: DirectiveProvideFactory;
     component: ComponentProvideFactory;
 }
-declare var _default: Provider;
+declare var _default: Provide;
 export default _default;
