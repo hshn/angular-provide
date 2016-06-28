@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
-
 module.exports = {
   debug: false,
   devtool: 'source-map',
@@ -14,7 +12,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.ts', '.js'],
-    root: path.resolve(__dirname, './src'),
+    root: path.resolve(__dirname, 'src'),
     modulesDirectories: ['node_modules']
   },
   module: {
