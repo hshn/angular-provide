@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AngularJS components separation helpers for common.js users.",
   "main": "dist/angular-provide.js",
-  "typings": "dist/src/index.ts",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "typings": "typings",
     "webpack": "webpack",
