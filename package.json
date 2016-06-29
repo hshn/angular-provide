@@ -2,6 +2,20 @@
   "name": "angular-provide",
   "version": "1.0.0",
   "description": "AngularJS components separation helpers for common.js users.",
+  "keywords": [
+    "Angular",
+    "Provider"
+  ],
+  "author": "Shota Hoshino",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hshn/angular-provide.git"
+  },
+  "homepage": "https://github.com/hshn/angular-provide#readme",
+  "bugs": {
+    "url": "https://github.com/hshn/angular-provide/issues"
+  },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -13,8 +27,7 @@
     "build": "tsc -p tsconfig.json",
     "prepublish": "npm run build"
   },
-  "author": "Shota Hoshino",
-  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "rimraf": "^2.5.2",
     "typescript": "^1.8.10",
