@@ -2,8 +2,8 @@
   "name": "angular-provide",
   "version": "1.0.0",
   "description": "AngularJS components separation helpers for common.js users.",
-  "main": "dist/angular-provide.js",
-  "typings": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "typings": "typings",
     "gulp": "gulp",
