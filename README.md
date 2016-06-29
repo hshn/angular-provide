@@ -5,6 +5,8 @@ This module provides a way to separate component definitions with component regi
 
 The concept which is using in this module are influenced by angular2 `Provider`.
 
+[sample source code here](https://github.com/hshn/angular-provide/tree/master/sample)
+
 # Usage
 
 ## Install
