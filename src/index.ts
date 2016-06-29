@@ -1,7 +1,7 @@
 import { Provider } from './provider';
 import {
-  ProviderProvideFactory, ServiceProvideFactory, FilterProvideFactory, DirectiveProvideFactory, ComponentProvideFactory,
-  providerFactory, serviceFactory, filterFactory, directiveFactory, componentFactory
+  ProviderProvideFactory, ServiceProvideFactory, FactoryProvideFactory, FilterProvideFactory, DirectiveProvideFactory, ComponentProvideFactory,
+  providerFactory, serviceFactory, factoryFactory, filterFactory, directiveFactory, componentFactory
 } from './factory';
 
 import IModule = angular.IModule;
@@ -10,6 +10,7 @@ export interface Provide {
   (module: IModule, ...provides: Provider[]): IModule;
   provider: ProviderProvideFactory;
   service: ServiceProvideFactory;
+  factory: FactoryProvideFactory;
   filter: FilterProvideFactory;
   directive: DirectiveProvideFactory;
   component: ComponentProvideFactory;
@@ -22,6 +23,7 @@ export default ((): Provide => {
 
   f.provider = providerFactory;
   f.service = serviceFactory;
+  f.factory = factoryFactory;
   f.filter = filterFactory;
   f.directive = directiveFactory;
   f.component = componentFactory;

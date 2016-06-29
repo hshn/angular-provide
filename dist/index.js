@@ -11,6 +11,7 @@ exports.default = (function () {
     };
     f.provider = factory_1.providerFactory;
     f.service = factory_1.serviceFactory;
+    f.factory = factory_1.factoryFactory;
     f.filter = factory_1.filterFactory;
     f.directive = factory_1.directiveFactory;
     f.component = factory_1.componentFactory;
