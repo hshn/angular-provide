@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "noEmitHelpers": true,
-    "outDir": "dist"
+    "outDir": "lib"
   },
   "exclude": [
     "node_modules"
