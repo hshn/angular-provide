@@ -1,0 +1,1 @@
+{"version":3,"file":"directive.js","sourceRoot":"","sources":["../../src/factory/directive.ts"],"names":[],"mappings":";AAUA,iBAAwB,IAAS,EAAE,SAAe;IAChD,MAAM,CAAC,SAAS,KAAK,SAAS;UAC1B,UAAA,MAAM,IAAI,OAAA,MAAM,CAAC,SAAS,CAAC,IAAI,CAAC,EAAtB,CAAsB;UAChC,UAAA,MAAM,IAAI,OAAA,MAAM,CAAC,SAAS,CAAC,IAAI,EAAE,SAAS,CAAC,EAAjC,CAAiC,CAAC;AAClD,CAAC;AAJe,eAAO,UAItB,CAAA"}

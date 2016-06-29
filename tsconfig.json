@@ -6,14 +6,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noEmitHelpers": true
+    "noEmitHelpers": true,
+    "outDir": "dist"
   },
   "exclude": [
     "node_modules"
   ],
-  "filesGlob": [
-    "./typings/index.d.ts",
-    "./src/**/*.ts"
+  "files": [
+    "typings/index.d.ts",
+    "src/index.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,

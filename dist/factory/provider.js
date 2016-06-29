@@ -5,3 +5,4 @@ function factory(name, value) {
         : function (module) { return module.provider(name, value); };
 }
 exports.factory = factory;
+//# sourceMappingURL=provider.js.map

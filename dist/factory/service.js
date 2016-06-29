@@ -6,3 +6,4 @@ function factory(name, service) {
 }
 exports.factory = factory;
 ;
+//# sourceMappingURL=service.js.map

@@ -11,3 +11,4 @@ var directive_1 = require('./directive');
 exports.directiveFactory = directive_1.factory;
 var component_1 = require('./component');
 exports.componentFactory = component_1.factory;
+//# sourceMappingURL=index.js.map

@@ -17,3 +17,4 @@ exports.default = (function () {
     f.component = factory_1.componentFactory;
     return f;
 })();
+//# sourceMappingURL=index.js.map
