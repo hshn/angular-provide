@@ -1,4 +1,4 @@
-import provide from '../.';
+import provide from 'angular-provide';
 
 import { sampleFactory } from './sample-factory';
 import { SampleService } from './sample-service';

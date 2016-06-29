@@ -1,5 +1,5 @@
 import * as angular from 'angular';
-import provide from '.';
+import provide from 'angular-provide';
 
 import { CONFIG_PROVIDERS } from './config';
 import { SERVICE_PROVIDERS } from './service';

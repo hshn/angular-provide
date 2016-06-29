@@ -1,4 +1,4 @@
-import provide from '../.';
+import provide from 'angular-provide';
 
 import { sampleProvider } from './sample-config';
 

@@ -1,4 +1,4 @@
-import provide from '../.';
+import provide from 'angular-provide';
 
 import { sampleComponentOptions } from './sample-component';
 import { sampleDirectiveFactory } from './sample-directive';
