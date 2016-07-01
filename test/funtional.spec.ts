@@ -113,5 +113,18 @@ describe('Functional test', () => {
       angular.mock.inject(_service_ => service = _service_);
       expect(service.service()).toEqual('service provider');
     });
+
+    it('should apply high priority provider first', () => {
+      bootstrap(
+        provide.run(($rootScope: IRootScopeService) => $rootScope['test'] *= 50).priority(75),
+        provide.run(($rootScope: IRootScopeService) => $rootScope['test'] = 100).priority(100),
+        provide.run(($rootScope: IRootScopeService) => $rootScope['test'] += 2).priority(50)
+      );
+
+      let test;
+      angular.mock.inject(($rootScope: IRootScopeService) => test = $rootScope['test']);
+
+      expect(test).toEqual(100 * 50 + 2);
+    });
   });
 });
