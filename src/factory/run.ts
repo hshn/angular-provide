@@ -1,4 +1,4 @@
-import { Provider } from '../provider';
+import { Provider, provider } from '../provider';
 
 export interface RunProviderFactory {
   (initializationFunction: Function): Provider;
@@ -6,5 +6,5 @@ export interface RunProviderFactory {
 }
 
 export function factory(fn: any): Provider {
-  return module => module.run(fn);
+  return provider(module => module.run(fn));
 }

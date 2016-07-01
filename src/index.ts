@@ -20,7 +20,9 @@ export interface Provide {
 
 export default ((): Provide => {
   let f = <Provide> function (module: IModule, ...providers: Provider[]) {
-    return providers.reduce((module, provider) => provider(module), module);
+    return providers
+      .sort((a, b) => - a.compare(b))
+      .reduce((module, provider) => provider.provide(module), module);
   };
 
   f.provider = providerFactory;

@@ -1,4 +1,4 @@
-import { Provider } from '../provider';
+import { Provider, provider } from '../provider';
 import IModule = angular.IModule;
 import IDirectiveFactory = angular.IDirectiveFactory;
 
@@ -10,6 +10,6 @@ export interface DirectiveProvideFactory {
 
 export function factory(name: any, directive?: any): Provider {
   return directive === undefined
-    ? module => module.directive(name)
-    : module => module.directive(name, directive);
+    ? provider(module => module.directive(name))
+    : provider(module => module.directive(name, directive));
 }

@@ -95,8 +95,9 @@ let provider = provide.run(function () {
   // ...
 });
 ```
+## Working with Providers
 
-## Aggregate providers
+### Aggregate providers
 
 ```js
 import provide from 'angular-provide';
@@ -111,7 +112,7 @@ const FOO_PROVIDERS = [
 export FOO_PROVIDERS;
 ```
 
-## Apply providers to a module
+### Apply providers to a module
 
 ```js
 import * as angular from 'angular';
@@ -128,5 +129,24 @@ provide(module, [
     ...MY_DIRECTIVE_PROVIDERS,
     ...MY_SERVICE_PROVIDERS,
 ]);
+```
 
+## Provider priority
+
+`Provider` could have a priority which can specify execution ordering.
+It helps defining the process which depends on some other process.
+
+> e.g. http request/response interceptors
+
+Providers will be apply to module in high priority order. (default priority is `0`)
+
+```js
+import provide from 'angular-provide';
+
+ // will execute this configuration early than others.
+let provider = provide
+  .config($httpProvider => {
+    $httpProvider.interceptors.push(function () {...})
+  })
+  .priority(1000)
 ```
