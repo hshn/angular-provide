@@ -1,4 +1,4 @@
-import { Provider } from '../provider';
+import { Provider, provider } from '../provider';
 import IModule = angular.IModule;
 import IComponentOptions = angular.IComponentOptions;
 
@@ -7,5 +7,5 @@ export interface ComponentProvideFactory {
 }
 
 export function factory(name: string, options: IComponentOptions): Provider {
-  return module => module.component(name, options);
+  return provider(module => module.component(name, options));
 }

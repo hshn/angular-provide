@@ -1,4 +1,4 @@
-import { Provider } from '../provider';
+import { Provider, provider } from '../provider';
 
 export interface ConfigProviderFactory {
   (configFn: Function): Provider;
@@ -7,5 +7,5 @@ export interface ConfigProviderFactory {
 }
 
 export function factory(config: any): Provider {
-  return module => module.config(config);
+  return provider(module => module.config(config));
 }

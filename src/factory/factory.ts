@@ -1,4 +1,4 @@
-import { Provider } from '../provider';
+import { Provider, provider } from '../provider';
 import IModule = angular.IModule;
 
 export interface FactoryProvideFactory {
@@ -9,6 +9,6 @@ export interface FactoryProvideFactory {
 
 export function factory(name: any, fn?: any): Provider {
   return fn === undefined
-    ? module => module.factory(name)
-    : module => module.factory(name, fn);
+    ? provider(module => module.factory(name))
+    : provider(module => module.factory(name, fn));
 };
