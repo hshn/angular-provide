@@ -20,18 +20,30 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "typings": "typings",
-    "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "karma": "karma",
+    "test": "karma start --single-run",
     "clean": "rimraf ./dist",
     "prebuild": "npm run clean",
-    "build": "tsc -p tsconfig.json",
-    "prepublish": "npm run build"
+    "build": "tsc -p tsconfig.json"
   },
   "dependencies": {},
   "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-mocks": "^1.5.7",
+    "awesome-typescript-loader": "^1.1.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.0.4",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
     "rimraf": "^2.5.2",
+    "source-maps-loader": "^0.1.7",
     "typescript": "^1.8.10",
-    "typings": "^1.3.0"
+    "typings": "^1.3.0",
+    "webpack": "^1.13.1"
   },
   "files": [
     "README.md",

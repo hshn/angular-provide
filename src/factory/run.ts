@@ -1,4 +1,4 @@
-import { Provider } from '../../lib/provider';
+import { Provider } from '../provider';
 
 export interface RunProviderFactory {
   (initializationFunction: Function): Provider;
