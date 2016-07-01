@@ -57,8 +57,6 @@ let provider = provide.service('foo', ServiceClass);
 ```js
 import provide from 'angular-provide';
 
-import { ServiceClass } from './service';
-
 // Factory will be registered as `foo`.
 let provider = provide.factory('foo', function () {
   // ...
@@ -69,8 +67,6 @@ let provider = provide.factory('foo', function () {
 
 ```js
 import provide from 'angular-provide';
-
-import { ServiceClass } from './service';
 
 // Directive will be registered as `foo`.
 let provider = provide.directive('foo', function () {
@@ -83,8 +79,6 @@ let provider = provide.directive('foo', function () {
 ```js
 import provide from 'angular-provide';
 
-import { ServiceClass } from './service';
-
 // Directive will be registered as `foo`.
 let provider = provide.component('foo', {
   // ...
@@ -95,8 +89,6 @@ let provider = provide.component('foo', {
 
 ```js
 import provide from 'angular-provide';
-
-import { ServiceClass } from './service';
 
 // Initialization function will be registered.
 let provider = provide.run(function () {
