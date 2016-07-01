@@ -9,6 +9,11 @@ The concept which is using in this module are influenced by angular2 `Provider`.
 
 [sample source code here](https://github.com/hshn/angular-provide/tree/master/sample)
 
+# Features
+
+ - Separating component definition with component registrations.
+ - Execution order management.
+
 # Usage
 
 ## Install
