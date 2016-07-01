@@ -1,6 +1,6 @@
 {
   "name": "angular-provide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AngularJS components separation helpers for common.js users.",
   "keywords": [
     "Angular",
