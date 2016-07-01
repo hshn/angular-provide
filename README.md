@@ -1,7 +1,7 @@
 angular-provide
 ===============
 
-[![Build Status](https://travis-ci.org/hshn/angular-provide.svg?branch=master)](https://travis-ci.org/hshn/angular-provide)
+[![Build Status](https://travis-ci.org/hshn/angular-provide.svg?branch=master)](https://travis-ci.org/hshn/angular-provide) [![npm version](https://badge.fury.io/js/angular-provide.svg)](https://badge.fury.io/js/angular-provide)
 
 This module provides a way to separate component definitions with component registrations for AngularJS.
 
