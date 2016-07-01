@@ -24,8 +24,7 @@
     "test": "karma start --single-run",
     "clean": "rimraf ./dist",
     "prebuild": "npm run clean",
-    "build": "tsc -p tsconfig.json",
-    "prepublish": "npm run build"
+    "build": "tsc -p tsconfig.json"
   },
   "dependencies": {},
   "devDependencies": {
