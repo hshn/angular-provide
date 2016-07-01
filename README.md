@@ -17,12 +17,24 @@ $ npm install angular-provide --save
 
 ## Define providers
 
+### Config
+
+```js
+import provide from 'angular-provide';
+
+// Configuration will be registered.
+let provider = provide.config(function ($someProvider) {
+  // ...
+});
+```
+
 ### Provider
 
 ```js
 import provide from 'angular-provide';
 
-let provider = provide.provider(function ($compileProvider) {
+// Provider will be registered as `foo`.
+let provider = provide.provider('foo', function () {
   // ...
 });
 ```
@@ -34,7 +46,7 @@ import provide from 'angular-provide';
 
 import { ServiceClass } from './service';
 
-// ServiceClass will be registered as `foo`
+// ServiceClass will be registered as `foo`.
 let provider = provide.service('foo', ServiceClass);
 ```
 
@@ -45,7 +57,7 @@ import provide from 'angular-provide';
 
 import { ServiceClass } from './service';
 
-// Factory will be registered as `foo`
+// Factory will be registered as `foo`.
 let provider = provide.factory('foo', function () {
   // ...
 });
@@ -58,7 +70,7 @@ import provide from 'angular-provide';
 
 import { ServiceClass } from './service';
 
-// Directive will be registered as `foo`
+// Directive will be registered as `foo`.
 let provider = provide.directive('foo', function () {
   // ...
 });
@@ -71,8 +83,21 @@ import provide from 'angular-provide';
 
 import { ServiceClass } from './service';
 
-// Directive will be registered as `foo`
+// Directive will be registered as `foo`.
 let provider = provide.component('foo', {
+  // ...
+});
+```
+
+### Run
+
+```js
+import provide from 'angular-provide';
+
+import { ServiceClass } from './service';
+
+// Initialization function will be registered.
+let provider = provide.run(function () {
   // ...
 });
 ```
