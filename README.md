@@ -130,10 +130,10 @@ import { MY_SERVICE_PROVIDERS } from './services';
 let module = angular.module('myApp', []);
 
 // apply providers to the module
-provide(module, [
-    ...MY_DIRECTIVE_PROVIDERS,
-    ...MY_SERVICE_PROVIDERS,
-]);
+provide(module,
+  ...MY_DIRECTIVE_PROVIDERS,
+  ...MY_SERVICE_PROVIDERS,
+);
 ```
 
 ## Provider priority
