@@ -1,7 +1,6 @@
 import * as angular from 'angular';
 import 'angular-mocks/ngMock';
-import provide from '../src';
-import { Provider } from '../src/provider';
+import provide, { Provider } from '../src';
 import ICompileProvider = angular.ICompileProvider;
 import IRootScopeService = angular.IRootScopeService;
 import ICompileService = angular.ICompileService;

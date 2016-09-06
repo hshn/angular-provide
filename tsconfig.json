@@ -18,7 +18,7 @@
   ],
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,
-    "forkChecker": true
+    "forkChecker": false
   },
   "compileOnSave": false,
   "buildOnSave": false,
