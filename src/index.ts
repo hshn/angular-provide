@@ -36,3 +36,5 @@ export default ((): Provide => {
 
   return f;
 })();
+
+export { Provider }
