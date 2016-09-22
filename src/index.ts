@@ -8,7 +8,7 @@ import {
 import IModule = angular.IModule;
 
 export interface Provide {
-  (module: IModule, ...provides: Provider[]): IModule;
+  (module: IModule, ...provides: Array<Provider | Provider[]>): IModule;
   provider: ProviderProvideFactory;
   config: ConfigProviderFactory,
   service: ServiceProvideFactory;
@@ -20,8 +20,9 @@ export interface Provide {
 }
 
 export default ((): Provide => {
-  let f = <Provide> function (module: IModule, ...providers: Provider[]) {
+  let f = <Provide> function (module: IModule, ...providers: Array<Provider | Provider[]>) {
     return providers
+      .reduce<Provider[]>((providers, provider) => providers.concat(provider), [])
       .sort((a, b) => - a.compare(b))
       .reduce((module, provider) => provider.provide(module), module);
   };
