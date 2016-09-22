@@ -22,7 +22,7 @@
     "karma": "karma",
     "test": "karma start --single-run",
     "watch": "karma start --no-single-run",
-    "clean": "rimraf ./dist",
+    "clean": "rimraf ./lib",
     "prebuild": "npm run clean",
     "build": "tsc -p tsconfig.json"
   },

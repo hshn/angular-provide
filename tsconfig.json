@@ -20,6 +20,9 @@
     "sample",
     "lib"
   ],
+  "files": [
+    "src/index.ts"
+  ],
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,
     "forkChecker": false
