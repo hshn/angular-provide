@@ -7,14 +7,18 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "noEmitHelpers": true,
-    "outDir": "lib"
+    "outDir": "lib",
+    "types": [
+      "angular",
+      "angular-mocks",
+      "jquery",
+      "jasmine"
+    ]
   },
   "exclude": [
-    "node_modules"
-  ],
-  "files": [
-    "typings/index.d.ts",
-    "src/index.ts"
+    "node_modules",
+    "sample",
+    "lib"
   ],
   "awesomeTypescriptLoaderOptions": {
     "resolveGlobs": true,

@@ -1,3 +1,4 @@
+import * as angular from 'angular';
 import { Provider } from './provider';
 import {
   ProviderProvideFactory, ConfigProviderFactory, ServiceProvideFactory, FactoryProvideFactory, FilterProvideFactory, DirectiveProvideFactory, ComponentProvideFactory, RunProviderFactory,
