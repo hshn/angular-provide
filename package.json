@@ -48,6 +48,9 @@
     "typescript": "^2.0.2",
     "webpack": "^1.13.1"
   },
+  "peerDependencies": {
+    "angular": "^1.5.0"
+  },
   "files": [
     "README.md",
     "package.json",
