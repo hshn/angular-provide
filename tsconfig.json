@@ -9,10 +9,10 @@
     "inlineSources": true,
     "noEmitHelpers": true,
     "outDir": "lib",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "types": [
-      "angular",
-      "angular-mocks",
-      "jquery",
       "jasmine"
     ]
   },
