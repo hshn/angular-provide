@@ -1,5 +1,4 @@
-import * as angular from 'angular';
-import IModule = angular.IModule;
+import { IModule } from 'angular';
 
 export interface Provider {
   provide(module: IModule): IModule

@@ -1,11 +1,15 @@
-import * as angular from 'angular';
-import { Provider } from './provider';
+import { IModule } from 'angular';
 import {
-  ProviderProvideFactory, ConfigProviderFactory, ServiceProvideFactory, FactoryProvideFactory, FilterProvideFactory, DirectiveProvideFactory, ComponentProvideFactory, RunProviderFactory,
-  providerFactory, configFactory, serviceFactory, factoryFactory, filterFactory, directiveFactory, componentFactory, runFactory
+  componentFactory, ComponentProvideFactory,
+  configFactory, ConfigProviderFactory,
+  directiveFactory, DirectiveProvideFactory,
+  factoryFactory, FactoryProvideFactory,
+  filterFactory, FilterProvideFactory,
+  providerFactory, ProviderProvideFactory,
+  runFactory, RunProviderFactory,
+  serviceFactory, ServiceProvideFactory,
 } from './factory';
-
-import IModule = angular.IModule;
+import { Provider } from './provider';
 
 export interface Provide {
   (module: IModule, ...provides: Array<Provider | Provider[]>): IModule;
@@ -19,7 +23,7 @@ export interface Provide {
   run: RunProviderFactory;
 }
 
-export default ((): Provide => {
+export const provide: Provide = ((): Provide => {
   let f = <Provide> function (module: IModule, ...providers: Array<Provider | Provider[]>) {
     return providers
       .reduce<Provider[]>((providers, provider) => providers.concat(provider), [])
@@ -38,5 +42,7 @@ export default ((): Provide => {
 
   return f;
 })();
+
+export default provide
 
 export { Provider }

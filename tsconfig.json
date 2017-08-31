@@ -2,17 +2,15 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
+    "moduleResolution": "node",
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
+    "inlineSources": true,
     "noEmitHelpers": true,
-    "outDir": "lib",
-    "types": [
-      "angular",
-      "angular-mocks",
-      "jquery",
-      "jasmine"
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
   "exclude": [

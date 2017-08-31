@@ -16,15 +16,16 @@
   "bugs": {
     "url": "https://github.com/hshn/angular-provide/issues"
   },
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "scripts": {
     "karma": "karma",
     "test": "karma start --single-run",
     "watch": "karma start --no-single-run",
-    "clean": "rimraf ./lib",
+    "clean": "rimraf ./dist",
     "prebuild": "npm run clean",
-    "build": "tsc -p tsconfig.json"
+    "build": "npm run build:es5",
+    "build:es5": "tsc -p tsconfig-es5.json"
   },
   "dependencies": {},
   "devDependencies": {
@@ -42,11 +43,12 @@
     "karma-mocha-reporter": "^2.0.4",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.7.0",
+    "karma-webpack": "^2.0.4",
     "rimraf": "^2.5.2",
-    "source-maps-loader": "^0.1.7",
-    "typescript": "^2.0.2",
-    "webpack": "^1.13.1"
+    "source-maps-loader": "^0.1.9",
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5"
   },
   "peerDependencies": {
     "angular": "^1.5.0"
@@ -54,6 +56,6 @@
   "files": [
     "README.md",
     "package.json",
-    "lib"
+    "dist"
   ]
 }
