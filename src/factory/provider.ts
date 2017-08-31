@@ -1,10 +1,5 @@
-import * as angular from 'angular';
 import { Provider, provider } from '../provider';
-
-import IModule = angular.IModule;
-import IServiceProviderFactory = angular.IServiceProviderFactory;
-import IServiceProviderClass = angular.IServiceProviderClass;
-import IServiceProvider = angular.IServiceProvider;
+import { IServiceProvider, IServiceProviderClass, IServiceProviderFactory } from 'angular';
 
 export interface ProviderProvideFactory {
   (name: string, serviceProviderFactory: IServiceProviderFactory): Provider;

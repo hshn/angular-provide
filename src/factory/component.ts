@@ -1,7 +1,5 @@
-import * as angular from 'angular';
+import { IComponentOptions } from 'angular';
 import { Provider, provider } from '../provider';
-import IModule = angular.IModule;
-import IComponentOptions = angular.IComponentOptions;
 
 export interface ComponentProvideFactory {
   (name: string, options: IComponentOptions): Provider;

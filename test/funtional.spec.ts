@@ -1,9 +1,7 @@
 import * as angular from 'angular';
-import 'angular-mocks/ngMock';
-import provide, { Provider } from '../src';
-import ICompileProvider = angular.ICompileProvider;
-import IRootScopeService = angular.IRootScopeService;
-import ICompileService = angular.ICompileService;
+import { ICompileProvider, ICompileService, IRootScopeService } from 'angular';
+import 'angular-mocks';
+import provide, { Provider } from '../src/index';
 
 describe('Functional test', () => {
   describe('Provider', () => {

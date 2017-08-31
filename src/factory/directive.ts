@@ -1,7 +1,5 @@
-import * as angular from 'angular';
+import { IDirectiveFactory } from 'angular';
 import { Provider, provider } from '../provider';
-import IModule = angular.IModule;
-import IDirectiveFactory = angular.IDirectiveFactory;
 
 export interface DirectiveProvideFactory {
   (name: string, directiveFactory: IDirectiveFactory): Provider;
